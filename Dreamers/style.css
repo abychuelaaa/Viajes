@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    text-decoration:none;
+    list-style:none;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.container{
+    max-width:1200px;
+    margin:0 auto;
+}
+
+/* HEADER */
+
+.header{
+    min-height:100vh;
+    background-image:url("https://i.ibb.co/twrcRrYc/PHOTO-2026-06-04-21-58-11.jpg");
+    background-position:center;
+    background-size:cover;
+    background-repeat:no-repeat;
+    position:relative;
+    overflow:hidden;
+}
+
+/* MENU */
+
+.menu{
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    padding:20px 40px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    z-index:100;
+}
+
+.logo{
+    width:180px;
+    height:auto;
+    display:block;
+}
+
+.navbar ul{
+    display:flex;
+    gap:15px;
+}
+
+.navbar ul li a{
+    color:#fff;
+    font-size:18px;
+    font-weight:bold;
+    padding:10px;
+    transition:0.3s;
+}
+
+.navbar ul li a:hover{
+    color:#099FA6;
+}
+
+.icons{
+    display:flex;
+    gap:20px;
+}
+
+.icons i{
+    color:#fff;
+    font-size:24px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.icons i:hover{
+    color:#099FA6;
+}
+
+/* CONTENIDO */
+
+.header-content{
+    display:flex;
+    align-items:center;
+    min-height:100vh;
+    padding:80px 50px 0 50px;
+}
+
+.header-txt{
+    width:38%;
+    max-width:450px;
+    z-index:10;
+}
+
+.header-txt h1{
+    font-size:68px;
+    line-height:70px;
+    color:#266371;
+    text-transform:uppercase;
+    font-family:"Roboto Condensed", sans-serif;
+    margin-bottom:25px;
+    text-shadow:2px 2px 10px rgba(0,0,0,.15);
+}
+
+.header-txt p{
+    width:100%;
+    max-width:420px;
+    color:#fff;
+    font-size:18px;
+    line-height:1.7;
+    margin-bottom:25px;
+    text-align:justify;
+    text-shadow:1px 1px 4px rgba(0,0,0,.2);
+}
+
+/* BOTON */
+
+.btn-1{
+    display:inline-block;
+    padding:12px 25px;
+    border-radius:30px;
+    background:#099FA6;
+    color:#fff;
+    text-transform:uppercase;
+    font-family:"Roboto Condensed", sans-serif;
+    transition:0.3s;
+}
+
+.btn-1:hover{
+    background:#266371;
+}
+
+/* SWIPER */
+
+.images{
+    width:52%;
+    height:520px;
+    position:absolute;
+    right:20px;
+    top:50%;
+    transform:translateY(-35%);
+}
+
+.swiper{
+    width:100%;
+    height:100%;
+}
+
+.swiper-slide{
+    position:relative;
+    border-radius:20px;
+    overflow:hidden;
+}
+
+.swiper-slide img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.swiper-slide h3{
+    position:absolute;
+    left:20px;
+    bottom:20px;
+    color:#fff;
+    font-size:38px;
+    font-family:"Roboto Condensed", sans-serif;
+    text-transform:uppercase;
+}
+
+/* FLECHAS */
+
+.rows{
+    position:absolute;
+    left:55%;
+    bottom:70px;
+    display:flex;
+    gap:25px;
+    z-index:100;
+}
+
+.swiper-button-prev,
+.swiper-button-next{
+    width:55px;
+    height:55px;
+    border:2px solid #fff;
+    border-radius:50%;
+    color:#fff;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after{
+    font-size:22px;
+    font-weight:bold;
+    color:#fff;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:991px){
+
+    .menu{
+        padding:20px;
+    }
+
+    .navbar{
+        display:none;
+    }
+
+    .icons{
+        display:none;
+    }
+
+    .header-content{
+        flex-direction:column;
+        justify-content:center;
+        text-align:center;
+        padding-top:120px;
+    }
+
+    .header-txt{
+        width:100%;
+        max-width:100%;
+        margin-bottom:40px;
+    }
+
+    .header-txt h1{
+        font-size:45px;
+        line-height:50px;
+    }
+
+    .header-txt p{
+        max-width:100%;
+        text-align:center;
+    }
+
+    .images{
+        position:relative;
+        width:100%;
+        height:350px;
+        right:auto;
+        top:auto;
+        transform:none;
+    }
+
+    .rows{
+        display:none;
+    }
+
+    .logo{
+        width:180px;
+    }
+} 
